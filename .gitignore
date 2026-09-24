@@ -1,0 +1,74 @@
+# Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build e arquivos gerados
+bin/
+obj/
+debug/
+release/
+*.exe
+*.dll
+*.pdb
+*.appx
+*.appxbundle
+*.buildinfo
+*.ipa
+*.iobj
+*.ipdb
+*.msi
+*.msix
+*.msixbundle
+*.nupkg
+*.snupkg
+*.swf
+*.prerelease
+*.mdb
+*.log
+
+# Diretórios de pacotes
+packages/
+*.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# Arquivos de configuração do sistema
+appsettings.json
+.env
+
+# Arquivos do Entity Framework
+**/Migrations/
+
+# Arquivos temporários
+*.tmp
+*.cache
+*.pid
+*.gzip
+
+# Arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs e rastreamento
+*.log
+*.tlog
+
+# Configuração do Rider
+.idea/
+*.iml
+
+# Outros
+*.bak
+*.old
+*.orig
+*.rej
+*.fail
+*.shm
+*.wal
+
+# Banco de dados
+dbEmployee.db*
