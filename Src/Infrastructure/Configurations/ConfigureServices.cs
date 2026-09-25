@@ -6,6 +6,8 @@ using access_manager_api.Shared.Auth.Requirements;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.OpenApi.Models;
+using access_manager_api.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace access_manager_api.Infrastructure.Configurations;
 
@@ -16,6 +18,7 @@ public static class ConfigureServices
         IConfiguration configuration
     )
     {
+        services.AddDbContext<AppDbContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
         services.AddEndpointsApiExplorer();
         services.AddHttpContextAccessor();
         services.AddControllers();

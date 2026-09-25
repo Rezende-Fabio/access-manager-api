@@ -71,4 +71,4 @@ Thumbs.db
 *.wal
 
 # Banco de dados
-dbEmployee.db*
+*.db
