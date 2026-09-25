@@ -7,5 +7,10 @@ public static class ConfigureRoutes
     {
         app.MapControllers();
         app.UseStaticFiles();
+        app.UseSwagger();
+        app.UseSwaggerUI(options =>
+        {
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Minha API v1");
+        });
     }
 }
