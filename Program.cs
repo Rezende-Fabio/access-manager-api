@@ -10,4 +10,5 @@ var app = builder.Build();
 // Configuração das rotas
 app.UseAppRoutes();
 
-app.Run();
+// app.Run();
+app.Run("http://0.0.0.0:5286");
