@@ -8,6 +8,11 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.OpenApi.Models;
 using access_manager_api.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using access_manager_api.Application.Interfaces.SetupInt;
+using access_manager_api.Application.Services;
+using access_manager_api.Application.Interfaces.UnitOfWorkInt;
+using access_manager_api.Application.Interfaces.RepositoryInt;
+using access_manager_api.Infrastructure.Repositories;
 
 namespace access_manager_api.Infrastructure.Configurations;
 
@@ -98,6 +103,10 @@ public static class ConfigureServices
                 policy => policy.Requirements.Add(new SameUserRequirement())
             );
         });
+
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        services.AddScoped<ISetupService, SetupService>();
 
         return services;
     }

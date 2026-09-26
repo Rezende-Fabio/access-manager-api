@@ -5,6 +5,7 @@ public static class ConfigureRoutes
 {
     public static void UseAppRoutes(this WebApplication app)
     {
+        app.UseCors("AllowAll");
         app.MapControllers();
         app.UseStaticFiles();
         app.UseSwagger();
