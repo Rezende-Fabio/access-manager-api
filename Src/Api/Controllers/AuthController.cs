@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace access_manager_api.Api.Controllers;
 
 [ApiController]
-[Route("v1/auth")]
+[Route("api/v1/auth")]
 public class AuthController : ControllerBase
 {
     [HttpGet("login")]
